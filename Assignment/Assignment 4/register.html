@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgb(113, 190, 214);">
+    <form class="form">
+    <div class="container2">
+        <h1> Register</h1>
+    <input type="text"class="input" id="user" onclick="border()"placeholder="Enter your name " style="border-color:rgb(113, 190, 214);"required>
+    <br>
+    <br>
+    <input type="tel" class="input" onclick="border()" id="mob"placeholder="Enter mobile no. "style="border-color:rgb(113, 190, 214);"required>
+    <br>
+    <br>
+    <input type="password" class="input" id="pass" onclick="border()" placeholder="Enter password"style="border-color:rgb(113, 190, 214);"required>
+    <br>
+    <br>
+    <input type="password" class="input" id="pass2" onclick="border()" placeholder="confirm password"style="border-color:rgb(113, 190, 214);"required>
+    <br>
+    <input type="button" class="button" value="Register"  onclick="check()" onclick="passValue()"></button>
+    <p style=font-size:15px>Already have account?<a href="Login.html"> Login </a></p>
+</form>
+
+<script>
+    // function passValue(){
+    
+    //     var a=document.getElementById("pass").value;
+    //     var b=document.getElementById("pass2").value;
+
+    //     if( a!==b){
+    //         alert("worng password");
+    //     }
+    //     else{
+    //         alert("Successfully");
+    //     }
+
+    //     }
+    function border(){
+        var a=document.getElementById("pass");
+        var b=document.getElementById("pass2");
+        var u=document.getElementById("user");
+        var m=document.getElementById("mob");
+
+       var pass=a.value;
+       var pass2=b.value;
+       var user=u.value;
+       var mob=m.value;
+
+        if(pass==""){
+            a.style.border=" 2px solid red";
+        }
+        else{
+            a.style.border=" 2px solid rgb(113, 190, 214)";
+        }
+         if(pass2==""){
+            b.style.border=" 2px solid red";
+        }
+        else{
+            b.style.border="2px solid rgb(113, 190, 214)";
+        }
+        if(user==""){
+            u.style.border=" 2px solid red";
+        }
+        else {
+            u.style.border="2px solid rgb(113, 190, 214)"; 
+        }
+         if(user==""){
+            m.style.border=" 2px solid red";
+        }
+        else{
+            m.style.border="2px solid rgb(113, 190, 214)"; 
+        }
+       
+
+    }
+
+            function check(){
+            var u= document.getElementById("user").value;
+            var p=document.getElementById("pass").value;
+            var m=document.getElementById("mob").value;
+            var b=document.getElementById("pass2").value;
+
+            if(u ==""){
+                alert("Username is Required");
+            }else if(p ==""){
+                alert("Password is Required");
+            }else if(m ==""){
+                alert("Enter mobile number");
+            }else if( p!==b){
+                alert("wrong password");
+            }
+             else{
+                alert("welcome");
+            }
+        }
+</script>
+</body>
+</html>
+            
+            
+
+
+
+    
+    
+      
+    
+   
+   
+    
+  
+    
+    
+
+    
